@@ -1,4 +1,4 @@
-# Using cron in OSx
+# Using crontab in OSx
 
 ### Here some example for running Ruby script with cron.
 
