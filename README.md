@@ -1,13 +1,20 @@
 # Using cron in OSx
 
-Here some example for running Ruby script with cron.
+### Here some example for running Ruby script with cron.
 
-list of shedule in crontab 
+I created Ruby script for take information from website `parser_ruby.rb`
+
+Each time when running script i save it in CSV file.
+
+Lets do for start this file automatically 
+
+
+List of shedule in crontab 
 
 ```
 $crontab -l
 ```
-edit cron file with Nano editor in terminal
+Edit cron file with Nano editor in terminal
 
 ```
 $env EDITOR=nano crontab -e
