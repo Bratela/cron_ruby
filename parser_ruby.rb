@@ -2,8 +2,8 @@ require 'rubygems'
 require 'nokogiri'   
 require 'open-uri'
 require 'csv'
-require 'terminal-table'
-# require 'rest-client'
+#require 'terminal-table'
+#require 'rest-client'
 
 PAGE_URL = "https://www.swedbank.lv/private/d2d/payments2/rates/currency"
 page = Nokogiri::HTML(open(PAGE_URL))
@@ -27,13 +27,13 @@ puts t.strftime("at %H:%M:%S")
 history = CSV.open('pound.csv', 'a' ,:headers => true) do |csv|
 	csv << [date,time,gbp.to_f,eur_gbp]
 end 
-
+# Read data from csv file
 def read_pound
 	CSV.foreach('pound.csv') do |row|
   	puts row.inspect
 	end
 end
 
-read_pound
+# read_pound
 
 
